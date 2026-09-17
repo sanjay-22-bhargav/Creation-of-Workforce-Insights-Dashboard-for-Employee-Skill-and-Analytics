@@ -51,6 +51,18 @@ flowchart LR
     E --> H[Interactive analytics dashboard]
     G --> H
     H --> I[Workforce and talent insights]
+
+    classDef source fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2px;
+    classDef process fill:#FEF3C7,stroke:#F59E0B,color:#78350F,stroke-width:2px;
+    classDef model fill:#EDE9FE,stroke:#7C3AED,color:#4C1D95,stroke-width:2px;
+    classDef assistant fill:#FCE7F3,stroke:#DB2777,color:#831843,stroke-width:2px;
+    classDef output fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:2px;
+
+    class A source;
+    class B,C process;
+    class D,E model;
+    class F,G assistant;
+    class H,I output;
 ```
 
 ## 🧠 Analytics Architecture
@@ -82,6 +94,22 @@ flowchart TB
     N --> R
     D --> S
     R --> S
+
+    classDef data fill:#DBEAFE,stroke:#2563EB,color:#1E3A8A,stroke-width:2px;
+    classDef processing fill:#FEF3C7,stroke:#D97706,color:#78350F,stroke-width:2px;
+    classDef ml fill:#EDE9FE,stroke:#8B5CF6,color:#4C1D95,stroke-width:2px;
+    classDef experience fill:#FCE7F3,stroke:#EC4899,color:#831843,stroke-width:2px;
+    classDef recommendation fill:#DCFCE7,stroke:#22C55E,color:#14532D,stroke-width:2px;
+
+    class X,T data;
+    class P,N processing;
+    class M ml;
+    class D,R experience;
+    class S recommendation;
+
+    style Data fill:#EFF6FF,stroke:#3B82F6,stroke-width:3px;
+    style Processing fill:#FFFBEB,stroke:#F59E0B,stroke-width:3px;
+    style Experience fill:#FDF2F8,stroke:#EC4899,stroke-width:3px;
 ```
 
 ## 🗂️ Repository Contents
