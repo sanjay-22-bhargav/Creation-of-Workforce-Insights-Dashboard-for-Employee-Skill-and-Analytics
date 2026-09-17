@@ -12,131 +12,152 @@
   <img src="https://img.shields.io/badge/RAG%20%2F%20LLM-6A5ACD?style=for-the-badge" alt="RAG and LLM" />
 </p>
 
-## 📊 Dashboard Preview
+## Overview
 
-The project combines workforce data, machine-learning predictions, and an AI assistant to help teams understand employee skills and workforce trends.
+This project creates an end-to-end workforce intelligence solution that combines:
 
-> **Interactive dashboard:** [Open the AI-Powered Workforce Analytics Dashboard](./AI-Powered%20Workforce%20Analytics%20Dashboard%20%282%29.html)
+- employee and skill data analysis
+- attrition-risk prediction using machine learning
+- interactive dashboard visualization
+- AI-powered retrieval using a TF-IDF + FAISS RAG workflow
 
-## 🎯 Project Objectives
+It is designed to help HR teams, managers, and leadership understand workforce composition, competency risks, and employee trends through a single analytics experience.
 
-- Analyze employee skills and workforce composition
-- Identify competency gaps and development opportunities
-- Explore workforce patterns across departments and roles
-- Predict attrition-related risk using machine learning
-- Support HR and leadership decisions with visual analytics
-- Enable natural-language workforce questions through a RAG assistant
+## Dashboard Preview
 
-## ✨ Key Features
+> Open the dashboard here: [AI-Powered Workforce Analytics Dashboard (2).html](./AI-Powered%20Workforce%20Analytics%20Dashboard%20%282%29.html)
+
+<p align="center">
+  <img src="https://placehold.co/1400x800/0f172a/ffffff?text=Workforce+Dashboard+Preview" alt="Workforce dashboard preview placeholder" />
+</p>
+
+> Replace the placeholder image above with an actual dashboard screenshot after running the project locally.
+
+## Project Objectives
+
+- Analyze workforce composition by role, department, and skills
+- Identify attrition-related risk factors and retention patterns
+- Explore employee performance, satisfaction, and engagement trends
+- Support decision-making with interactive visual analytics
+- Provide natural-language workforce queries through a retrieval-based assistant
+
+## Key Features
 
 | Feature | Description |
 | --- | --- |
-| 🧹 Data preparation | Clean and transform raw workforce data for analysis |
-| 📈 Workforce analytics | Explore employee, skill, role, and department patterns |
-| 🤖 Predictive modeling | Use an XGBoost pipeline for attrition-related predictions |
-| 💬 AI workforce assistant | Retrieve relevant context and answer workforce questions |
-| 🖥️ Interactive dashboard | Present insights in an accessible HTML dashboard |
-| 📁 Project documentation | Include notebooks, datasets, presentations, and test materials |
+| Data preparation | Clean and transform employee data for analysis |
+| Workforce analytics | Explore patterns by department, role, age, tenure, and performance |
+| Predictive modeling | Compare multiple machine learning models for attrition prediction |
+| AI workforce assistant | Use retrieval with TF-IDF + FAISS to answer workforce questions |
+| Interactive dashboard | Present insights in an HTML dashboard |
+| Documentation set | Includes notebooks, project docs, presentations, and workbooks |
 
-## 🔄 Project Workflow
-
-```mermaid
-flowchart LR
-    A[Raw workforce data] --> B[Data cleaning and preprocessing]
-    B --> C[Exploratory workforce and skill analysis]
-    C --> D[Machine-learning modeling]
-    D --> E[Predictions and evaluation]
-    C --> F[Knowledge base]
-    F --> G[RAG / LLM workforce assistant]
-    E --> H[Interactive analytics dashboard]
-    G --> H
-    H --> I[Workforce and talent insights]
-```
-
-## 🧠 Analytics Architecture
-
-```mermaid
-flowchart TB
-    subgraph Data[Data Sources]
-        X[Employee Excel datasets]
-        T[Testing and project workbooks]
-    end
-
-    subgraph Processing[Analytics Pipeline]
-        P[Python and Pandas]
-        N[Jupyter notebooks]
-        M[XGBoost attrition pipeline]
-    end
-
-    subgraph Experience[Insight Layer]
-        D[HTML dashboard]
-        R[RAG / LLM assistant]
-        S[Recommendations for workforce planning]
-    end
-
-    X --> P
-    T --> P
-    P --> N
-    N --> M
-    M --> D
-    N --> R
-    D --> S
-    R --> S
-```
-
-## 🗂️ Repository Contents
+## Repository Contents
 
 | File | Purpose |
 | --- | --- |
 | [`02_data_cleaning_preprocessing.ipynb`](./02_data_cleaning_preprocessing.ipynb) | Data cleaning and preprocessing |
-| [`04_ml_modeling.ipynb`](./04_ml_modeling.ipynb) | Machine-learning model development |
+| [`04_ml_modeling.ipynb`](./04_ml_modeling.ipynb) | Model development and evaluation |
 | [`05_ml_predictions.ipynb`](./05_ml_predictions.ipynb) | Prediction workflow |
-| [`06_rag_llm_workforce_assistant.ipynb`](./06_rag_llm_workforce_assistant.ipynb) | RAG/LLM workforce assistant |
+| [`06_rag_llm_workforce_assistant.ipynb`](./06_rag_llm_workforce_assistant.ipynb) | RAG-based workforce assistant |
 | [`AI-Powered Workforce Analytics Dashboard (2).html`](./AI-Powered%20Workforce%20Analytics%20Dashboard%20%282%29.html) | Interactive dashboard |
-| [`database.py`](./database.py) | Database-related Python code |
+| [`database.py`](./database.py) | PostgreSQL connection helper |
 | [`dataset for internship_raw.xlsx`](./dataset%20for%20internship_raw.xlsx) | Raw workforce dataset |
-| [`xgboost_attrition_pipeline.pkl`](./xgboost_attrition_pipeline.pkl) | Serialized prediction pipeline |
-| `*.pptx` and `*.docx` | Presentations and supporting documentation |
-| `*.xlsx` | Supporting datasets and test materials |
+| [`xgboost_attrition_pipeline.pkl`](./xgboost_attrition_pipeline.pkl) | Serialized model artifact |
+| `*.pptx` and `*.docx` | Project presentations and supporting documentation |
+| `*.xlsx` | Supporting datasets and test files |
 
-## 🛠️ Technology Stack
+## Technology Stack
 
-- **Python** — data processing and application logic
-- **Jupyter Notebook** — analysis and experimentation
-- **Pandas / NumPy** — data manipulation
-- **Scikit-learn / XGBoost** — machine-learning workflows
-- **RAG / LLM technologies** — AI-assisted workforce queries
-- **HTML** — dashboard presentation
-- **Excel** — source and supporting data
+- Python
+- Jupyter Notebook
+- Pandas / NumPy
+- Scikit-learn
+- XGBoost
+- FAISS
+- SQLAlchemy / psycopg2
+- HTML / JavaScript dashboard
+- PostgreSQL (for the ML workflow)
 
-## 🚀 Getting Started
+## Model Performance Summary
 
-### Clone the repository
+The machine learning workflow compares several models on the workforce attrition dataset. Based on the notebook output, the results are:
+
+| Model | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Logistic Regression | 0.7517 | 0.3523 | 0.6596 | 0.4593 | 0.8145 |
+| Decision Tree | 0.8027 | 0.4035 | 0.4894 | 0.4423 | 0.6195 |
+| Random Forest | 0.8503 | 0.6364 | 0.1489 | 0.2414 | 0.8161 |
+| Gradient Boosting | 0.8673 | 0.7857 | 0.2340 | 0.3607 | 0.8310 |
+| XGBoost | 0.8605 | 0.6875 | 0.2340 | 0.3492 | 0.8400 |
+
+### Interpretation
+
+- Gradient Boosting and XGBoost achieve the highest overall accuracy.
+- Logistic Regression performs best in terms of recall, which is often more important in attrition-risk detection because it identifies more at-risk employees.
+- The class imbalance in the dataset means one should review precision/recall trade-offs before selecting a final model for production use.
+- For a real deployment, it is advisable to add cross-validation, class-weight tuning, confusion matrices, and business validation before making a final decision.
+
+## Project Workflow
+
+```mermaid
+flowchart LR
+    A[Raw workforce data] --> B[Data cleaning and preprocessing]
+    B --> C[Exploratory analysis]
+    C --> D[Machine learning modeling]
+    D --> E[Predictions and evaluation]
+    C --> F[Knowledge base]
+    F --> G[RAG / LLM workforce assistant]
+    E --> H[Interactive dashboard]
+    G --> H
+    H --> I[Workforce insights]
+```
+
+## Getting Started
+
+### 1) Clone the repository
 
 ```bash
 git clone https://github.com/sanjay-22-bhargav/Creation-of-Workforce-Insights-Dashboard-for-Employee-Skill-and-Analytics.git
 cd Creation-of-Workforce-Insights-Dashboard-for-Employee-Skill-and-Analytics
 ```
 
-### View the dashboard
+### 2) Create and activate a virtual environment
 
-Start a local web server so the dashboard and its assets load correctly:
+```bash
+python -m venv .venv
+
+# macOS / Linux
+source .venv/bin/activate
+
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+```
+
+### 3) Install dependencies
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install jupyter pandas numpy scikit-learn xgboost faiss-cpu sqlalchemy psycopg2-binary python-dotenv
+```
+
+### 4) Start the dashboard locally
 
 ```bash
 python -m http.server 8000
 ```
 
-Open [http://localhost:8000](http://localhost:8000) and select **AI-Powered Workforce Analytics Dashboard (2).html**.
+Then open:
 
-### Run the notebooks
+```text
+http://localhost:8000
+```
+
+Select `AI-Powered Workforce Analytics Dashboard (2).html` from the list.
+
+### 5) Run the notebooks
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-
-python -m pip install --upgrade pip
-python -m pip install jupyter pandas numpy scikit-learn xgboost
 jupyter notebook
 ```
 
@@ -147,32 +168,46 @@ Run the notebooks in this order:
 3. `05_ml_predictions.ipynb`
 4. `06_rag_llm_workforce_assistant.ipynb`
 
-The RAG/LLM notebook may require additional provider-specific packages and credentials. Never commit API keys or other secrets.
+### 6) Database setup for the ML workflow
 
-## 📌 Responsible Use
+The modeling notebook expects a PostgreSQL instance with a database named `workforce_intelligence` and a table named `workforce_analytics`.
+
+If you are running the ML notebook locally:
+
+```sql
+CREATE DATABASE workforce_intelligence;
+```
+
+Then import the prepared employee dataset into a `workforce_analytics` table or connect your local database to the notebook environment.
+
+> The notebook uses a local PostgreSQL connection with default values for host, port, user, and database. You may need to update these values if your local setup differs.
+
+## Responsible Use
 
 Workforce analytics can influence important employment decisions. Before using this project with real employee data:
 
-- Remove personally identifiable or confidential information.
-- Validate model accuracy, fairness, and bias across relevant groups.
-- Do not use predictions as the sole basis for employment decisions.
-- Keep a human reviewer involved in interpretation and decision-making.
-- Protect datasets, model files, logs, and credentials appropriately.
+- Remove personally identifiable or confidential information
+- Validate model accuracy, fairness, and bias across relevant groups
+- Do not use predictions as the sole basis for employment decisions
+- Keep a human reviewer involved in decision-making
+- Protect datasets, logs, and credentials appropriately
 
-## 🔮 Future Improvements
+## Future Improvements
 
-- Add a pinned `requirements.txt` or `environment.yml`
-- Include dashboard screenshots and model-performance metrics
-- Add a data dictionary and feature documentation
-- Add automated tests for preprocessing and predictions
-- Add a reproducible dashboard-generation script
-- Add a `.gitignore` for environments, logs, secrets, and generated files
+- Add a pinned `requirements.txt` file
+- Add a proper `environment.yml` for easier reproduction
+- Add automated tests for preprocessing and model validation
+- Include screenshots and architecture diagrams in a docs folder
+- Add data dictionaries and feature documentation
+- Clean up notebook paths so the project is portable across machines
+- Add a `.gitignore` for logs, secrets, checkpoints, and virtual environments
 
-## 📄 License
+## License
 
 This project is licensed under the terms of the [LICENSE](./LICENSE) file.
 
-## 👤 Author
+## Author
 
-**Sanjay Bhargav**  
-[GitHub profile](https://github.com/sanjay-22-bhargav)
+**Sanjay Bhargav**
+
+[GitHub Profile](https://github.com/sanjay-22-bhargav)
