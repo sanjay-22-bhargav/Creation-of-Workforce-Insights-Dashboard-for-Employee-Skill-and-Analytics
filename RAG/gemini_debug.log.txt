@@ -1,0 +1,31 @@
+[Gemini Diagnostic] API key exists: True
+[Gemini Diagnostic] Model name: gemini-2.5-flash
+[Gemini Diagnostic] Gemini API call attempted: True
+[Gemini Diagnostic] API call started for model: gemini-2.5-flash
+[Gemini Diagnostic] exception type/message on gemini-2.5-flash: ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API.', 'status': 'NOT_FOUND'}}
+[Gemini Diagnostic] API call started for model: gemini-flash-latest
+[Gemini Diagnostic] exception type/message on gemini-flash-latest: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[Gemini Diagnostic] API call started for model: gemini-3.6-flash
+[Gemini Diagnostic] API key exists: True
+[Gemini Diagnostic] Model name: gemini-2.5-flash
+[Gemini Diagnostic] Gemini API call attempted: True
+[Gemini Diagnostic] API call started for model: gemini-2.5-flash
+[Gemini Diagnostic] exception type/message on gemini-2.5-flash: ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API.', 'status': 'NOT_FOUND'}}
+[Gemini Diagnostic] API call started for model: gemini-flash-latest
+[Gemini Diagnostic] exception type/message on gemini-flash-latest: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[Gemini Diagnostic] API call started for model: gemini-3.6-flash
+[Gemini Diagnostic] API call succeeded for model: gemini-3.6-flash
+[Gemini Diagnostic] response received: True
+[Gemini Diagnostic] response text length: 784
+[Gemini Diagnostic] API key exists: True
+[Gemini Diagnostic] Model name: gemini-2.5-flash
+[Gemini Diagnostic] Gemini API call attempted: True
+[Gemini Diagnostic] API call started for model: gemini-2.5-flash
+[Gemini Diagnostic] exception type/message on gemini-2.5-flash: ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API.', 'status': 'NOT_FOUND'}}
+[Gemini Diagnostic] API call started for model: gemini-flash-latest
+[Gemini Diagnostic] API call succeeded for model: gemini-3.6-flash
+[Gemini Diagnostic] response received: True
+[Gemini Diagnostic] response text length: 60
+[Gemini Diagnostic] API call succeeded for model: gemini-flash-latest
+[Gemini Diagnostic] response received: True
+[Gemini Diagnostic] response text length: 77
