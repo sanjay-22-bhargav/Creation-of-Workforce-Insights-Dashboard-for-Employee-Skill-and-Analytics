@@ -22,7 +22,7 @@
 
 ## 📌 Overview
 
-The **Workforce Insights Dashboard for Employee Skill and Analytics** combines prepared workforce data, exploratory analysis, machine-learning experiments, a Flask API, and a retrieval-augmented generation (RAG) assistant in one project.
+The **Workforce Insights Dashboard for Employee Skill and Analytics** combines prepared workforce data, exploratory analysis, machine-learning experiments, a Flask API, and a retrieval-augmented generation (RAG) assistant to provide a structured picture of the workforce.
 
 The project is intended to help analysts and workforce-planning teams:
 
@@ -44,6 +44,25 @@ The project is intended to help analysts and workforce-planning teams:
 | **Flask backend** | API routes for dashboard data, employee records, analytics, predictions, and chat. |
 | **RAG assistant** | Document loading, indexing, vector retrieval, and LLM response generation for workforce questions. |
 | **Project evidence** | Milestone reports, presentation material, test workbooks, and supporting documentation. |
+
+## 📊 Executive dashboard
+
+The project combines analytics, automation, and AI to deliver a practical workforce intelligence workflow from raw data to decision support.
+
+```mermaid
+pie title Repository composition
+    "Jupyter Notebook" : 78.3
+    "HTML" : 18.1
+    "Python" : 3.6
+```
+
+```mermaid
+xychart-beta
+    title "Capabilities coverage"
+    x-axis ["Dashboard" "Data" "ML" "API" "RAG"]
+    y-axis "Score" 0 --> 100
+    bar [95, 90, 88, 92, 80]
+```
 
 ## 🖥️ Dashboard preview
 
