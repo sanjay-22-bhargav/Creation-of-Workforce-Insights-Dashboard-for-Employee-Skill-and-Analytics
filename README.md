@@ -1,154 +1,136 @@
-# Workforce Insights Dashboard for Employee Skills and Analytics
+# Workforce Insights Dashboard
 
 <p align="center">
-  <strong>AI-powered workforce analytics for skills, talent intelligence, and data-informed workforce planning.</strong>
+  <img src="https://img.shields.io/badge/Workforce-Analytics-2563EB?style=for-the-badge" alt="Workforce Analytics" />
+  <img src="https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.9 or newer" />
+  <img src="https://img.shields.io/badge/Jupyter-Notebooks-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Notebooks" />
+  <img src="https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=111827" alt="Power BI" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter" />
-  <img src="https://img.shields.io/badge/XGBoost-EC6B23?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost" />
-  <img src="https://img.shields.io/badge/Machine%20Learning-412991?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Machine Learning" />
-  <img src="https://img.shields.io/badge/RAG%20%2F%20LLM-6A5ACD?style=for-the-badge" alt="RAG and LLM" />
+  <strong>A data, machine-learning, and AI-assisted platform for understanding employee skills, workforce composition, and talent trends.</strong>
 </p>
 
-## 📊 Dashboard Preview
+<p align="center">
+  <a href="#-quick-start">Quick start</a> ·
+  <a href="#-project-architecture">Architecture</a> ·
+  <a href="#-repository-guide">Repository guide</a> ·
+  <a href="#-responsible-use">Responsible use</a>
+</p>
 
-The project combines workforce data, machine-learning predictions, and an AI assistant to help teams understand employee skills and workforce trends.
+---
 
-> **Interactive dashboard:** [Open the AI-Powered Workforce Analytics Dashboard](./AI-Powered%20Workforce%20Analytics%20Dashboard%20%282%29.html)
+## 📌 Overview
 
-## 🎯 Project Objectives
+The **Workforce Insights Dashboard for Employee Skill and Analytics** combines prepared workforce data, exploratory analysis, machine-learning experiments, a Flask API, and a retrieval-augmented generation (RAG) assistant in one project.
 
-- Analyze employee skills and workforce composition
-- Identify competency gaps and development opportunities
-- Explore workforce patterns across departments and roles
-- Predict attrition-related risk using machine learning
-- Support HR and leadership decisions with visual analytics
-- Enable natural-language workforce questions through a RAG assistant
+The project is intended to help analysts and workforce-planning teams:
 
-## ✨ Key Features
+- understand workforce composition across roles, departments, and skills;
+- identify skill patterns and potential development opportunities;
+- explore workforce and employee-level analytics through APIs and dashboards;
+- experiment with prediction workflows such as attrition and promotion analysis; and
+- ask natural-language questions over project knowledge and workforce context.
 
-| Feature | Description |
+> **Note:** This repository contains research, coursework, and decision-support material. It is not a ready-to-deploy HR decision system.
+
+## ✨ Highlights
+
+| Capability | Description |
 | --- | --- |
-| 🧹 Data preparation | Clean and transform raw workforce data for analysis |
-| 📈 Workforce analytics | Explore employee, skill, role, and department patterns |
-| 🤖 Predictive modeling | Use an XGBoost pipeline for attrition-related predictions |
-| 💬 AI workforce assistant | Retrieve relevant context and answer workforce questions |
-| 🖥️ Interactive dashboard | Present insights in an accessible HTML dashboard |
-| 📁 Project documentation | Include notebooks, datasets, presentations, and test materials |
+| **Interactive dashboard** | A standalone HTML dashboard and a Power BI `.pbix` artifact for exploring workforce insights. |
+| **Data preparation** | CSV and Excel workforce files are processed into analysis-ready datasets. |
+| **Machine learning** | Jupyter workflows for feature preparation, model training, evaluation, and predictions. |
+| **Flask backend** | API routes for dashboard data, employee records, analytics, predictions, and chat. |
+| **RAG assistant** | Document loading, indexing, vector retrieval, and LLM response generation for workforce questions. |
+| **Project evidence** | Milestone reports, presentation material, test workbooks, and supporting documentation. |
 
-## 🔄 Project Workflow
+## 🖥️ Dashboard preview
+
+The repository includes a self-contained HTML dashboard:
+
+**[Open the AI-Powered Workforce Analytics Dashboard](./AI-Powered%20Workforce%20Analytics%20Dashboard%20%282%29.html)**
+
+For best results, serve the repository with a local HTTP server rather than opening the HTML file directly. This avoids browser restrictions around local assets and relative paths.
+
+## 🏗️ Project architecture
 
 ```mermaid
 flowchart LR
-    A[Raw workforce data] --> B[Data cleaning and preprocessing]
-    B --> C[Exploratory workforce and skill analysis]
-    C --> D[Machine-learning modeling]
-    D --> E[Predictions and evaluation]
-    C --> F[Knowledge base]
-    F --> G[RAG / LLM workforce assistant]
-    E --> H[Interactive analytics dashboard]
-    G --> H
-    H --> I[Workforce and talent insights]
+    A[CSV and Excel workforce data] --> B[Data loading and preprocessing]
+    B --> C[Exploratory analysis]
+    C --> D[ML-ready datasets]
+    D --> E[Model training and evaluation]
+    E --> F[Predictions]
+    B --> G[Flask backend]
+    F --> G
+    G --> H[Dashboard and API consumers]
+    I[Project documents] --> J[RAG document loader]
+    J --> K[Vector index]
+    K --> L[RAG workforce assistant]
+    L --> G
 
-    classDef source fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2px;
-    classDef process fill:#FEF3C7,stroke:#F59E0B,color:#78350F,stroke-width:2px;
-    classDef model fill:#EDE9FE,stroke:#7C3AED,color:#4C1D95,stroke-width:2px;
-    classDef assistant fill:#FCE7F3,stroke:#DB2777,color:#831843,stroke-width:2px;
-    classDef output fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:2px;
+    classDef source fill:#dbeafe,stroke:#2563eb,color:#1e3a8a;
+    classDef process fill:#fef3c7,stroke:#d97706,color:#78350f;
+    classDef output fill:#dcfce7,stroke:#16a34a,color:#14532d;
+    classDef ai fill:#fce7f3,stroke:#db2777,color:#831843;
 
-    class A source;
-    class B,C process;
-    class D,E model;
-    class F,G assistant;
-    class H,I output;
+    class A,I source;
+    class B,C,D,E,F,G process;
+    class H output;
+    class J,K,L ai;
 ```
 
-## 🧠 Analytics Architecture
+## 🗂️ Repository guide
 
-```mermaid
-flowchart TB
-    subgraph Data[Data Sources]
-        X[Employee Excel datasets]
-        T[Testing and project workbooks]
-    end
-
-    subgraph Processing[Analytics Pipeline]
-        P[Python and Pandas]
-        N[Jupyter notebooks]
-        M[XGBoost attrition pipeline]
-    end
-
-    subgraph Experience[Insight Layer]
-        D[HTML dashboard]
-        R[RAG / LLM assistant]
-        S[Recommendations for workforce planning]
-    end
-
-    X --> P
-    T --> P
-    P --> N
-    N --> M
-    M --> D
-    N --> R
-    D --> S
-    R --> S
-
-    classDef data fill:#DBEAFE,stroke:#2563EB,color:#1E3A8A,stroke-width:2px;
-    classDef processing fill:#FEF3C7,stroke:#D97706,color:#78350F,stroke-width:2px;
-    classDef ml fill:#EDE9FE,stroke:#8B5CF6,color:#4C1D95,stroke-width:2px;
-    classDef experience fill:#FCE7F3,stroke:#EC4899,color:#831843,stroke-width:2px;
-    classDef recommendation fill:#DCFCE7,stroke:#22C55E,color:#14532D,stroke-width:2px;
-
-    class X,T data;
-    class P,N processing;
-    class M ml;
-    class D,R experience;
-    class S recommendation;
-
-    style Data fill:#EFF6FF,stroke:#3B82F6,stroke-width:3px;
-    style Processing fill:#FFFBEB,stroke:#F59E0B,stroke-width:3px;
-    style Experience fill:#FDF2F8,stroke:#EC4899,stroke-width:3px;
+```text
+.
+├── AI-Powered Workforce Analytics Dashboard (2).html  # Standalone HTML dashboard
+├── WorkForce_Dashboard.pbix                            # Power BI dashboard artifact
+├── DATA/                                               # Raw and processed workforce CSV files
+├── Backend/                                            # Flask API and service layer
+│   ├── app.py                                          # Application entry point
+│   ├── data_loader.py                                  # CSV/Excel loading and normalization
+│   ├── *_routes.py                                     # Dashboard, employee, analytics, prediction, chat routes
+│   ├── *_service.py                                    # Backend business logic
+│   ├── attrition_model.py                              # Attrition model integration
+│   ├── promotion_model.py                              # Promotion model integration
+│   └── requirements.txt                                # Backend dependencies
+├── ML/                                                 # Modeling notebooks and prepared datasets
+│   ├── 04_ml_modeling.ipynb                            # Model development and evaluation
+│   ├── 05_ml_predictions.ipynb                         # Prediction workflow
+│   ├── ML_Ready_Dataset.csv                            # Prepared modeling data
+│   ├── Feature_Classification.xlsx                     # Feature reference workbook
+│   └── X_train.csv, X_test.csv, y_train.csv, y_test.csv
+├── RAG/                                                # Retrieval-augmented generation workflow
+│   ├── build_index.py                                  # Build the vector index
+│   ├── rag_service.py                                  # Retrieval service
+│   ├── generator.py                                    # Response generation
+│   ├── document_loader.py                              # Knowledge-source loading
+│   └── 06_rag_llm_workforce_assistant.ipynb            # RAG/LLM notebook
+├── project/                                            # Reports and milestone deliverables
+├── Agile.xlsx                                          # Agile/project tracking workbook
+├── Unit Test.xlsx                                      # Test evidence/workbook
+├── LICENSE                                             # Project license
+└── README.md                                           # This guide
 ```
 
-## 🗂️ Repository Contents
+More detailed module documentation is available in:
 
-| File | Purpose |
-| --- | --- |
-| [`02_data_cleaning_preprocessing.ipynb`](./02_data_cleaning_preprocessing.ipynb) | Data cleaning and preprocessing |
-| [`04_ml_modeling.ipynb`](./04_ml_modeling.ipynb) | Machine-learning model development |
-| [`05_ml_predictions.ipynb`](./05_ml_predictions.ipynb) | Prediction workflow |
-| [`06_rag_llm_workforce_assistant.ipynb`](./06_rag_llm_workforce_assistant.ipynb) | RAG/LLM workforce assistant |
-| [`AI-Powered Workforce Analytics Dashboard (2).html`](./AI-Powered%20Workforce%20Analytics%20Dashboard%20%282%29.html) | Interactive dashboard |
-| [`database.py`](./database.py) | Database-related Python code |
-| [`dataset for internship_raw.xlsx`](./dataset%20for%20internship_raw.xlsx) | Raw workforce dataset |
-| [`xgboost_attrition_pipeline.pkl`](./xgboost_attrition_pipeline.pkl) | Serialized prediction pipeline |
-| `*.pptx` and `*.docx` | Presentations and supporting documentation |
-| `*.xlsx` | Supporting datasets and test materials |
+- [Backend README](./Backend/README.md)
+- [Machine Learning README](./ML/README.md)
+- [RAG README](./RAG/README.md)
 
-## 🛠️ Technology Stack
+## 🚀 Quick start
 
-- **Python** — data processing and application logic
-- **Jupyter Notebook** — analysis and experimentation
-- **Pandas / NumPy** — data manipulation
-- **Scikit-learn / XGBoost** — machine-learning workflows
-- **RAG / LLM technologies** — AI-assisted workforce queries
-- **HTML** — dashboard presentation
-- **Excel** — source and supporting data
-
-## 🚀 Getting Started
-
-### Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/sanjay-22-bhargav/Creation-of-Workforce-Insights-Dashboard-for-Employee-Skill-and-Analytics.git
 cd Creation-of-Workforce-Insights-Dashboard-for-Employee-Skill-and-Analytics
 ```
 
-### View the dashboard
-
-Start a local web server so the dashboard and its assets load correctly:
+### 2. View the HTML dashboard
 
 ```bash
 python -m http.server 8000
@@ -156,49 +138,122 @@ python -m http.server 8000
 
 Open [http://localhost:8000](http://localhost:8000) and select **AI-Powered Workforce Analytics Dashboard (2).html**.
 
-### Run the notebooks
+### 3. Set up the backend
 
 ```bash
 python -m venv .venv
+
+# macOS/Linux
 source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
+
+# Windows PowerShell
+.\.venv\Scripts\Activate.ps1
 
 python -m pip install --upgrade pip
-python -m pip install jupyter pandas numpy scikit-learn xgboost
-jupyter notebook
+python -m pip install -r Backend/requirements.txt
+cd Backend
+python app.py
 ```
 
-Run the notebooks in this order:
+The Flask service runs at `http://localhost:5000` by default. The backend documentation describes the health checks and route groups:
 
-1. `02_data_cleaning_preprocessing.ipynb`
-2. `04_ml_modeling.ipynb`
-3. `05_ml_predictions.ipynb`
-4. `06_rag_llm_workforce_assistant.ipynb`
+- `GET /`
+- `GET /api/health`
+- `/api/dashboard`
+- `/api/employees`
+- `/api/analytics`
+- `/api/predict`
+- `/api/chat`
 
-The RAG/LLM notebook may require additional provider-specific packages and credentials. Never commit API keys or other secrets.
+### 4. Run the machine-learning notebooks
 
-## 📌 Responsible Use
+The ML workflow is documented in [ML/README.md](./ML/README.md). A typical environment can be created with:
 
-Workforce analytics can influence important employment decisions. Before using this project with real employee data:
+```bash
+python -m pip install jupyter pandas numpy scikit-learn xgboost matplotlib seaborn openpyxl joblib
+jupyter lab
+```
 
-- Remove personally identifiable or confidential information.
-- Validate model accuracy, fairness, and bias across relevant groups.
-- Do not use predictions as the sole basis for employment decisions.
-- Keep a human reviewer involved in interpretation and decision-making.
-- Protect datasets, model files, logs, and credentials appropriately.
+Recommended workflow:
 
-## 🔮 Future Improvements
+1. Confirm the source and processed datasets are current.
+2. Review the feature definitions in `ML/Feature_Classification.xlsx`.
+3. Run `ML/04_ml_modeling.ipynb` from top to bottom.
+4. Review the target definition, split strategy, metrics, and model outputs.
+5. Run `ML/05_ml_predictions.ipynb` using the same feature schema as training.
+6. Validate outputs before using them in the backend or dashboard.
 
-- Add a pinned `requirements.txt` or `environment.yml`
-- Include dashboard screenshots and model-performance metrics
-- Add a data dictionary and feature documentation
-- Add automated tests for preprocessing and predictions
-- Add a reproducible dashboard-generation script
-- Add a `.gitignore` for environments, logs, secrets, and generated files
+### 5. Run the RAG workflow
+
+See [RAG/README.md](./RAG/README.md) for configuration and provider-specific setup. RAG or LLM features may require environment variables and external API credentials.
+
+**Never commit API keys, access tokens, private documents, `.env` files, or generated secrets.**
+
+## 📊 Data and modeling notes
+
+The main data assets include:
+
+- `DATA/workfroce data.csv` — source workforce data currently stored in the repository;
+- `DATA/workforce processed data.csv` — processed workforce data;
+- `ML/ML_Ready_Dataset.csv` — dataset prepared for machine-learning experiments; and
+- `ML/X_train.csv`, `ML/X_test.csv`, `ML/y_train.csv`, `ML/y_test.csv` — training and hold-out files.
+
+Before rerunning or extending the workflow:
+
+- verify the input path and expected columns;
+- document missing-value handling and categorical encoding;
+- keep preprocessing identical between training and inference;
+- check for duplicate records and target leakage;
+- record the dataset version, random seed, package versions, and evaluation metrics; and
+- treat serialized model artifacts as coupled to their training data and preprocessing code.
+
+## 🧪 Testing and reproducibility
+
+This project includes a `Unit Test.xlsx` workbook and milestone documentation. For repeatable notebook results:
+
+- create a clean virtual environment;
+- restart the notebook kernel before running all cells;
+- run cells in order rather than relying on prior interactive state;
+- set random seeds where supported;
+- validate schemas before model inference; and
+- record changes to data, dependencies, and model artifacts.
+
+Future engineering improvements could include automated data-quality checks, Python unit tests, notebook smoke tests, pinned environment files, and CI validation.
+
+## 🔐 Responsible use and privacy
+
+Employee and workforce data can be sensitive. Use this repository responsibly:
+
+- use anonymized, synthetic, or explicitly approved data whenever possible;
+- remove unnecessary names, contact details, employee identifiers, and confidential fields;
+- restrict access to raw data, logs, model files, and generated predictions;
+- do not use model predictions as the sole basis for hiring, promotion, compensation, disciplinary, or termination decisions;
+- evaluate accuracy, calibration, stability, and fairness across relevant groups;
+- communicate uncertainty and known limitations to dashboard users; and
+- keep a qualified human reviewer accountable for consequential decisions.
+
+Historical labels and exploratory correlations should not automatically be presented as reliable predictions of future employee behavior.
+
+## 🛣️ Roadmap
+
+- Add a repository-wide `requirements.txt` or `environment.yml` with pinned versions.
+- Add a data dictionary and model card for each production-quality model.
+- Add automated tests for preprocessing, routes, and prediction input validation.
+- Add dashboard screenshots and documented example API responses.
+- Move reusable notebook logic into tested Python modules.
+- Add schema validation and dataset versioning.
+- Add deployment documentation for the Flask API and dashboard.
+- Add a safe configuration template for RAG providers without exposing credentials.
+
+## 📚 Project documentation
+
+Supporting deliverables are available in the [`project/`](./project/) directory, including milestone reports and the final report. The presentation is available at:
+
+[Creation of Workforce Insights Dashboard for Employee Skill and Analytics.pptx](./Creation%20of%20Workforce%20Insights%20Dashboard%20for%20Employee%20Skill%20and%20Analytics.pptx)
 
 ## 📄 License
 
-This project is licensed under the terms of the [LICENSE](./LICENSE) file.
+See the [LICENSE](./LICENSE) file for the applicable license terms.
 
 ## 👤 Author
 
